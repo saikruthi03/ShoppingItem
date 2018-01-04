@@ -5,7 +5,7 @@ android {
     buildToolsVersion "26.0.2"
     defaultConfig {
         applicationId "com.example.anush.shoppingitem"
-        minSdkVersion 15
+        minSdkVersion 21
         targetSdkVersion 25
         versionCode 1
         versionName "1.0"
@@ -33,10 +33,21 @@ dependencies {
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
+   // compile 'org.tensorflow:tensorflow-android:+'
     compile 'com.android.support:appcompat-v7:25.3.1'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     compile 'com.android.support:design:25.3.1'
     compile 'org.jbundle.util.osgi.wrapped:org.jbundle.util.osgi.wrapped.org.apache.http.client:4.1.2'
+    // https://mvnrepository.com/artifact/org.json/json
+    compile group: 'org.json', name: 'json', version: '20171018'
+
+    // https://mvnrepository.com/artifact/org.apache.httpcomponents/httpmime
+    //compile group: 'org.apache.httpcomponents', name: 'httpmime', version: '4.2.1'
+    // https://mvnrepository.com/artifact/commons-codec/commons-codec
+   // compile group: 'commons-codec', name: 'commons-codec', version: '1.9'
+
+
     testCompile 'junit:junit:4.12'
     compile project(':openCVLibrary300')
+    compile files('libs/opencv-2.4.1.jar')
 }
